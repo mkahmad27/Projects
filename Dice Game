@@ -1,0 +1,16 @@
+import random
+def dice_game():
+  print("welcome to my dice game!!")
+  your_name = input("Please enter your name: ")
+  lucky_number = 5
+  #initialise computer number
+  int(input("Please select a lucky number between 1 and 6:"))
+  computer_die_roll = random.randint(1,6)
+  print("The computer rolled: ",computer_die_roll)
+  if lucky_number == computer_die_roll:
+   print("You guessed correct, well done!")
+  elif lucky_number < computer_die_roll:
+     print("You guessed too low!")
+  else:
+    print("You guessed too high")
+dice_game()
