@@ -42,4 +42,4 @@ while True:
         print("Goodbye!")
         break
     else:
-        print("Invalid choice. Please select a valid option."
+        print("Invalid choice. Please select a valid option.")
