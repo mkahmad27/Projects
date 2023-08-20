@@ -1,0 +1,20 @@
+import requests
+from bs4 import BeautifulSoup
+
+def scrape_website(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+    return soup
+
+if __name__ == "__main__":
+    url = input("Enter the URL to scrape: ")
+    page = scrape_website(url)
+    
+    if page:
+        # Here's an example of extracting all the <a> tag links from the page
+        links = page.find_all("a")
+        print("Links on the page:")
+        for link in links:
+            print(link.get("href"))
+    else:
+        print("Failed to scrape the website.")
